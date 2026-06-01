@@ -1,7 +1,7 @@
 @extends('layout.user_template')
 
 @section('content')
-<main class="col-md-9 col-lg-10 px-md-4 py-4">
+<main class="px-md-4 py-4">
 
     {{-- HEADER --}}
     <div class="d-flex justify-content-between align-items-center pb-2 mb-4">
@@ -27,7 +27,6 @@
         @forelse($games as $game)
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="card h-100 border shadow-sm">
-                {{-- COVER IMAGE --}}
                 @if($game->image)
                     <img src="{{ asset('storage/' . $game->image) }}"
                          class="card-img-top"
@@ -79,10 +78,7 @@
         @endforelse
     </div>
 
-</main>
-
-Nakikita ko ang issue — nawala ang mga label ng form fields kasi text-muted sila at puti ang modal background. Palitan ng text-dark:
-blade{{-- ADD GAME MODAL --}}
+{{-- ADD GAME MODAL --}}
 <div class="modal fade" id="addGameModal" tabindex="-1">
     <div class="modal-dialog">
         <form action="{{ route('games.store') }}" method="POST" class="modal-content" enctype="multipart/form-data">
@@ -194,4 +190,5 @@ blade{{-- ADD GAME MODAL --}}
     }
 </script>
 
+</main>
 @endsection
