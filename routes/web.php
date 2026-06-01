@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
-Route::get('/game', [GameController::class, 'index'])->name('game.index');
+    Route::get('/game', [GameController::class, 'index'])->name('game.index');
     Route::resource('games', GameController::class);
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
