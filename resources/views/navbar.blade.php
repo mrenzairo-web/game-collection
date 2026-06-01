@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white {{ Route::is('game.index') ? 'fw-bold border-bottom' : '' }}" href="{{ route('menu.index') }}">
+                    <a class="nav-link text-white {{ Route::is('menu.index') ? 'fw-bold border-bottom' : '' }}" href="{{ route('menu.index') }}">
                         Game Collection
                     </a>
                 </li>
@@ -32,12 +32,10 @@
 </nav>
 
 <style>
-    /* Hover effect para sa links */
     .nav-link:hover {
-        color: #ffb7c5 !important; /* Sakura pink color on hover */
+        color: #ffb7c5 !important;
     }
     
-    /* Highlight yung border bottom para sa active page */
     .border-bottom {
         border-bottom: 2px solid #ffb7c5 !important;
     }
