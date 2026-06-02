@@ -4,9 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController; 
 use App\Http\Controllers\DashboardController; 
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\GameController; // ✅ FIXED: Capital 'G'
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\ProfileController;
-
 
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
@@ -23,8 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
-    Route::get('/game', [GameController::class, 'index'])->name('game.index');
-    Route::resource('games', GameController::class);
+    Route::resource('games', GameController::class); 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');

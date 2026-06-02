@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-<a class="nav-link text-white {{ Route::is('game.index') ? 'fw-bold border-bottom' : '' }}" href="{{ route('game.index') }}">
+                    <a class="nav-link text-white {{ Route::is('games.index') ? 'fw-bold border-bottom' : '' }}" href="{{ route('games.index') }}">
                         Game Collection
                     </a>
                 </li>
