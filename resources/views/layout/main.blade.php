@@ -9,36 +9,36 @@
 </head>
 <body class="bg-dark">
 
-         @include('header')
-       
-        <div class="bg-dark">
-            @yield('content')
-        </div>
+    @include('header')
+    
+    <div class="bg-dark">
+        @yield('content')
+    </div>
 
-        <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
-            
-            <div id="successToast" class="toast bg-warning text-dark border-0 rounded-3 shadow" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex p-3 justify-content-between align-items-center">
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-check-circle-fill fs-5"></i>
-                        <span class="fw-bold" id="successToastMessage">Action Successful!</span>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-
-            <div id="errorToast" class="toast bg-danger text-white border-0 rounded-3 shadow" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex p-3 justify-content-between align-items-center">
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-exclamation-triangle-fill fs-5"></i>
-                        <span class="fw-bold" id="errorToastMessage">Something went wrong.</span>
-                    </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-
-        </div>
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1100;">
         
+        <div id="successToast" class="toast bg-success text-white border-0 rounded-3 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex p-3 justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill fs-5"></i>
+                    <span class="fw-bold" id="successToastMessage">Action Successful!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div id="errorToast" class="toast bg-danger text-white border-0 rounded-3 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex p-3 justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+                    <span class="fw-bold" id="errorToastMessage">Something went wrong.</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
